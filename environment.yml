@@ -1,0 +1,13 @@
+name: ud2pos
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.7
+  - numpy
+  - tqdm
+  - pylint=2.4.4
+  - pip
+  - pip:
+    - ipdb
+    - conllu
