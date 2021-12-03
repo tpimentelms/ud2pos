@@ -51,6 +51,15 @@ $ make process LANGUAGE=<language>
 ```
 As languages, you should be able to experiment on any in UD. For instance: 'english'; 'czech'; 'basque'; 'finnish'; 'turkish'; 'arabic'; 'japanese'; 'tamil'; 'korean'; 'marathi'; 'urdu'; 'telugu'; 'indonesian'.
 
+## Upload new data to PyPi
+
+
+Upgrade the repository version in `setup.py`. Then run:
+```bash
+$ python setup.py sdist
+$ twine upload dist/*
+```
+
 
 ## Extra Information
 
