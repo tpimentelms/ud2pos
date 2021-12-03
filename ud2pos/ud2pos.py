@@ -34,7 +34,3 @@ class UdTagger:
 
     def __call__(self, word):
         return self.model.get(word.lower(), self.UNK_TAG)
-
-
-if __name__ == '__main__':
-    main()

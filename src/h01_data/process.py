@@ -2,8 +2,6 @@ import os
 import argparse
 import re
 import csv
-import json
-import pickle
 from conllu import parse_incr
 
 
@@ -76,7 +74,7 @@ def merge_dicts(dict_counts1, dict_counts2):
 def clean_data(instances):
     instances = sorted(instances.items(), key=lambda x: x[1], reverse=True)
     cleaned_data = {}
-    for item, count in instances:
+    for item, _ in instances:
         wordform = item[1]
         if wordform not in cleaned_data:
             cleaned_data[wordform] = item
@@ -94,7 +92,7 @@ def clean_data(instances):
     ]
 
 
-def process(language, ud_path, output_file):
+def process(language, ud_path):
     print("Precessing language %s" % language)
     ud_paths = get_ud_file_base(ud_path, language)
     ud_data = {}
@@ -126,8 +124,8 @@ def main():
     ud_path = args.ud_path
     output_file = args.output_file
 
-    results = process(language, ud_path, output_file)
-    write_data(args.output_file, results)
+    results = process(language, ud_path)
+    write_data(output_file, results)
 
 
 if __name__ == "__main__":
