@@ -7,7 +7,7 @@ def readme():
 
 
 setup(name='ud2pos',
-      version='0.113',
+      version='0.114',
       description='Method to get part-of-speech tags from universal dependencies data.',
       long_description=readme(),
       keywords='part-of-speech universal-dependencies',
