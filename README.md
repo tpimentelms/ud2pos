@@ -1,5 +1,7 @@
 # ud2pos
 
+[![CircleCI](https://circleci.com/gh/tpimentelms/ud2pos.svg?style=svg&circle-token=d3f2433d9576bb5413356b1ef77c50272d22de8d)](https://circleci.com/gh/tpimentelms/ud2pos)
+
 This code creates a map from wordform to part-of-speech using UD data.
 
 ## Using this simple part-of-speech tagger
